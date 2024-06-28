@@ -66,7 +66,7 @@
 <script src="https://webappcontent.telegram.org/js/jquery.min.js"></script>
 <script>
     Telegram.WebApp.ready();
-
+    Telegram.WebApp.close()
     var initData = Telegram.WebApp.initData || '';
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     alert(initDataUnsafe.user)
@@ -78,6 +78,6 @@
         <button onclick="player.startGame()" type="submit">Повторить</button>
     </form>
 </dialog>
-<script src="./js/index.js"></script>
+
 
 </html>
