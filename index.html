@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/game.css">
+
+	<title>Game</title>
+</head>
+
+
+<body>
+	<main>
+		<section id="game">
+			<div class="game-info">
+				<div>
+					Счёт:
+					<b id="player-score">0</b>
+				</div>
+				<div>
+					Попытки:
+					<b id="lives-count">3</b>
+				</div>
+			</div>
+
+			<div class="game-field">
+
+				
+					<div id="tl" class="launcher" onclick="player.updatePlayerPosition(true, true)">
+						<img src="./img/coin.png" alt="" class="coin-sprite">
+						<img src="./img/launcher.png" alt="" class="launcher-sprite">
+					</div>
+					<div id="bl" class="launcher" onclick="player.updatePlayerPosition(false, true)">
+						<img src="./img/coin.png" alt="" class="coin-sprite">
+						<img src="./img/launcher.png" alt="" class="launcher-sprite">
+					</div>
+				
+
+				<div id="catcher"><img src="./img/man_top.png" alt="" id="catcher-sprite"></div>
+				
+					<div id="tr" class="launcher" onclick="player.updatePlayerPosition(true, false)">
+						<img src="./img/coin.png" alt="" class="coin-sprite">
+						<img src="./img/launcher.png" alt="" class="launcher-sprite" style="transform: scale(-1, 1);">
+					</div>
+					<div id="br" class="launcher" onclick="player.updatePlayerPosition(false, false)">
+						<img src="./img/coin.png" alt="" class="coin-sprite">
+						<img src="./img/launcher.png" alt="" class="launcher-sprite" style="transform: scale(-1, 1);">
+					</div>
+				
+
+			</div>
+
+		</section>
+	</main>
+</body>
+<dialog id="game-over-dialog">
+	<form method="dialog">
+		<h3>Игра окончена</h3>
+		<button onclick="player.startGame()" type="submit">Повторить</button>
+	</form>
+</dialog>
+<script src="./js/index.js"></script>
+
+</html>

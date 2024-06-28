@@ -1,0 +1,106 @@
+.game-info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 8vmin;
+    margin-bottom: 5%;
+}
+
+.game-field {
+    height: 100%;
+
+    margin: 3%;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+
+
+}
+
+.launcher {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.launcher#tl {
+    top: 0;
+    left: 0;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.launcher#tr {
+    top: 0;
+    right: 0;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.launcher#bl {
+    bottom: 0;
+    left: 0;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.launcher#br {
+    bottom: 0;
+    right: 0;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.launcher-sprite {
+    position: relative;
+    width: 100%;
+}
+
+.coin-sprite {
+    height: 7vmin;
+    z-index: 10;
+    position: absolute;
+    display: none;
+}
+
+#catcher {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    border: 5%;
+    border-radius: 25px;
+    border-color: black;
+    border-style: solid;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#catcher-sprite {
+    position: absolute;
+
+    max-height: 100%;
+    max-width: 100%;
+
+    bottom: 0%;
+}
