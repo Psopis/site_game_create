@@ -9,18 +9,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/game.css">
 
-    <script>
-        alert(Telegram.WebApp)
-        alert(Telegram.WebApp.initData)
 
-        function setThemeClass() {
-            document.documentElement.className = Telegram.WebApp.colorScheme;
-        }
-
-        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
-        setThemeClass();
-
-    </script>
     <title>Game</title>
 </head>
 
@@ -72,7 +61,7 @@
 <script>
     Telegram.WebApp.ready();
 
-    var initData = Telegram.WebApp.initData || '';
+
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
     alert(initDataUnsafe.user.first_name)
     Telegram.WebApp.sendData(player.playerScore)
