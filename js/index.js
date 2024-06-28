@@ -148,6 +148,6 @@ class Player {
 let player = new Player();
 
 var WebApp = window.Telegram.WebApp;
-WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+alert(WebApp)
 
 player.startGame();
