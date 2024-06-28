@@ -145,4 +145,11 @@ class Player {
 
 
 let player = new Player();
+let tg = window.Telegram.WebApp;
+
+var initData = Telegram.WebApp.initData || '';
+var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+alert(tg.initDataUnsafe.user)
+alert(tg)
+alert(window.Telegram.WebApp.sendData(playerScore))
 player.startGame();
