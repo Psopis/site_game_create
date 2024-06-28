@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/game.css">
 
+    <script>
+        function setThemeClass() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+        }
 
+        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+        setThemeClass();
+
+    </script>
     <title>Game</title>
 </head>
 
@@ -58,13 +66,14 @@
     </section>
 </main>
 
+<script src="./js/index.js"></script>
 <script>
     Telegram.WebApp.ready();
 
-
+    var initData = Telegram.WebApp.initData || '';
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
-    alert(initDataUnsafe.user.first_name)
-    Telegram.WebApp.sendData(player.playerScore)
+    alert(initDataUnsafe.user)
+    alert(Telegram.WebApp.sendData(playerScore))
 </script>
 </body>
 <dialog id="game-over-dialog">
