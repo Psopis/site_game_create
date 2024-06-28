@@ -74,7 +74,8 @@
     Telegram.WebApp.close()
     var initData = Telegram.WebApp.initData || '';
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
-    alert(initDataUnsafe.user)
+    alert(initDataUnsafe.user.first_name)
+    Telegram.WebApp.sendData(player.playerScore)
 </script>
 </body>
 <dialog id="game-over-dialog">
