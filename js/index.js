@@ -148,6 +148,6 @@ class Player {
 let player = new Player();
 
 var WebApp = window.Telegram.WebApp;
-alert(WebApp)
+alert(WebApp.user.first_name)
 
 player.startGame();
