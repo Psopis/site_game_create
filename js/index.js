@@ -1,7 +1,7 @@
 class Player {
 	constructor() {
 		this.play = false;
-		this.tg = window.Telegram.WebApp
+
 		this.onTop = true;
 		this.onLeft = true;
 
