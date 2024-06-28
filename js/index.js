@@ -1,7 +1,7 @@
 class Player {
 	constructor() {
 		this.play = false;
-
+		this.tg = window.Telegram.WebApp;
 		this.onTop = true;
 		this.onLeft = true;
 
@@ -36,7 +36,7 @@ class Player {
 		}
 		if (!this.playerLives) {
 			this.play = false;
-
+			tg.sendData(this.playerScore)
 			document.getElementById("game-over-dialog").showModal();
 		}
 		this.updateLivesCounter();
