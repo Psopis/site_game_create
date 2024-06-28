@@ -36,7 +36,6 @@ class Player {
 		}
 		if (!this.playerLives) {
 			this.play = false;
-
 			document.getElementById("game-over-dialog").showModal();
 		}
 		this.updateLivesCounter();
