@@ -56,15 +56,15 @@
 </main>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
-    let tg = window.Telegram.WebApp
-    alert(tg)
-
+    let tg = window.Telegram.WebApp;
+    alert(tg.initDataUnsafe.user.first_name);
+    tg.sendData(this.playerScore);
 </script>
 </body>
 <dialog id="game-over-dialog">
     <form method="dialog">
         <h3>Игра окончена</h3>
-        <button onclick="tg.close()" type="submit">Повторить</button>
+        <button onclick="player.startGame()" type="submit">Повторить</button>
     </form>
 </dialog>
 <script src="./js/index.js"></script>
